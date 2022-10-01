@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "paar_contacts",
+  "info": {
+    "singularName": "paar-contact",
+    "pluralName": "paar-contacts",
+    "displayName": "Paar contact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
