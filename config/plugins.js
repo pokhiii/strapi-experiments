@@ -1,5 +1,4 @@
 module.exports = ({ env }) => ({
-  // ...
   email: {
     config: {
       provider: 'amazon-ses',
@@ -14,5 +13,4 @@ module.exports = ({ env }) => ({
       },
     },
   },
-  // ...
 });
