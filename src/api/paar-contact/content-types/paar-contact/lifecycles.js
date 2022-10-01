@@ -6,12 +6,20 @@ module.exports = {
     event.params.data.price = event.params.data.price * 0.8;
   },
 
-  afterCreate(event) {
+  async afterCreate(event) {
     const { result, params } = event;
 
-    console.log('lakshaaa this is for you....')
-    console.log('after_create called')
+    console.log(strapi.plugins['email'].services.email.getProviderSettings())
 
-    // do something to the result;
+    await strapi.plugins['email'].services.email.send({
+      to: 'pokhi@coloredcow.com',
+      from: 'employee@coloredcow.com', //e.g. single sender verification in SendGrid
+      cc: '',
+      bcc: '',
+      replyTo: '',
+      subject: 'Lakshay testing for PAAR',
+      html: 'Please forward this email to varshney.lakshya05@gmail.com<br><br>Thanks',
+    })
+
   },
 };
